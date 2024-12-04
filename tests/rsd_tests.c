@@ -10,12 +10,14 @@
 #include <unistd.h>
 
 #include "../rsd_pid.h"
+#include "../rsd_path.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
-    pid_t currPid;
-    rds_pid_to_fpath("/tmp/rsd_tests.pid", &currPid);
+    pid_t pid1, pid2;
+    rds_pid_to_fpath("/tmp/rsd_tests.pid", &pid1);
+    rds_pid_from_fpath("/tmp/rsd_tests.pid", &pid2);
     for (int i = 0; i < 10; i++) {
         fprintf(stdout, "%i ", i);
         fflush(stdout);

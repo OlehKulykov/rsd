@@ -5,12 +5,8 @@
  * Created by Oleh Kulykov <olehkulykov@gmail.com>, 2024.
  */
 
-#ifndef __RSD_ERRC_H__
-#define __RSD_ERRC_H__ 1
+#ifndef __RSD_PATH_H__
+#define __RSD_PATH_H__ 1
 
-#define RSD_ERRC_getpid     -1001
-#define RSD_ERRC_fopen      -1002
-#define RSD_ERRC_snprintf   -1003
-#define RSD_ERRC_fwrite     -1004
 
-#endif // !__RSD_ERRC_H__
+#endif // !__RSD_PATH_H__
