@@ -12,10 +12,10 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
-    for (int i = 0; i < 9000; i++) {
+    for (int i = 0; i < 10; i++) {
         fprintf(stdout, "%i ", i);
         fflush(stdout);
-        usleep(9000);
+        usleep(100);
     }
 //    std::cout << "Hello, World!\n";
     return 0;
