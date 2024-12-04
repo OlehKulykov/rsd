@@ -9,6 +9,9 @@
 #define __RSD_ERRC_H__ 1
 
 #define RSD_ERRC_getpid     -1
-#define RSD_ERRC_fopen_wb   -2
+#define RSD_ERRC_fopen      -2
+#define RSD_ERRC_snprintf   -3
+#define RSD_ERRC_fwrite     -4
+
 
 #endif // !__RSD_ERRC_H__

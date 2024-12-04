@@ -15,19 +15,19 @@
 #include "rsd.h"
 #include "rsd_errc.h"
 
-RSD_API(int) rds_pid_to_fpath(const char * RSD_NONNULL filePath) {
+RSD_API(int) rds_pid_to_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NULLABLE currPid) {
     const pid_t p = getpid();
     if (p <= 0) return RSD_ERRC_getpid;
-    FILE * f = fopen(filePath, "w+b");
-    if (!f) return RSD_ERRC_fopen_wb;
+    if (currPid) { *currPid = p; }
     char buff[16];
-//    PRIu64;
-//    snprintf(buff, 16, "%ll");
-    
-//    PRIX8;
-    
+    const int len = snprintf(buff, 16, "%" PRIu64, (uint64_t)p);
+    if (len <= 0) return RSD_ERRC_snprintf;
+    FILE * f = fopen(filePath, "w+b");
+    if (!f) return RSD_ERRC_fopen;
+    int res = 0;
+    if (fwrite(buff, len, 1, f) != 1) { res = RSD_ERRC_fwrite; }
     fclose(f);
-    return 0;
+    return res;
 }
 
 #endif // !__RSD_PID_H__

@@ -14,6 +14,8 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
+    pid_t currPid;
+    rds_pid_to_fpath("/tmp/rsd_tests.pid", &currPid);
     for (int i = 0; i < 10; i++) {
         fprintf(stdout, "%i ", i);
         fflush(stdout);
