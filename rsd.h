@@ -16,7 +16,7 @@
 #  undef DEBUG
 #endif
 
-#define RSD_API(RETURN_TYPE) static inline RETURN_TYPE
+#define RSD_API(RETURN_TYPE) static RETURN_TYPE
 
 #if defined(__clang__)
 #  define RSD_NULLABLE _Nullable
