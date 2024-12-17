@@ -15,6 +15,7 @@
 #include "../rsd_logf.h"
 #include "../rsd_path.h"
 #include "../rsd_pid.h"
+#include "../rsd_stdio.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -31,7 +32,7 @@ int main(int argc, const char * argv[]) {
         fflush(stdout);
         usleep(100);
     }
-    int res = 0;
+    int res = rsd_stdio_to_dev_null();
 //    std::cout << "Hello, World!\n";
     return res;
 }

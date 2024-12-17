@@ -14,5 +14,7 @@
 #define RSD_ERRC_fwrite     -1004
 #define RSD_ERRC_malloc     -1005
 #define RSD_ERRC_realloc    -1006
+#define RSD_ERRC_close      -1007
+#define RSD_ERRC_freopen    -1008
 
 #endif // !__RSD_ERRC_H__

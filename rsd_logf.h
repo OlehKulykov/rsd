@@ -8,7 +8,13 @@
 #ifndef __RSD_LOGF_H__
 #define __RSD_LOGF_H__ 1
 
+#include <stddef.h>     // NULL, nullptr_t, size_t, wchar_t
+
+#include "rsd.h"
+#include "rsd_errc.h"
+
 RSD_API(int) rds_logf_open_fpath(const char * RSD_NONNULL filePath) {
+    
     return 0;
 }
 

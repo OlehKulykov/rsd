@@ -68,6 +68,7 @@ set(RSD_TESTS_HEADERS
   rsd_logf.h
   rsd_path.h
   rsd_pid.h
+  rsd_stdio.h
 )
 
 set(RSD_TESTS_SOURCES
@@ -82,6 +83,7 @@ source_group("main" FILES
   rsd_logf.h
   rsd_path.h
   rsd_pid.h
+  rsd_stdio.h
 )
 
 #TODO: check installed JSON libs, if not include bundled 'cJSON.h'
