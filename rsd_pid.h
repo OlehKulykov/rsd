@@ -2,7 +2,7 @@
  * Copyright (C) Oleh Kulykov <olehkulykov@gmail.com>. All Rights Reserved.
  * Unauthorized copying of this file, via any medium is strictly prohibited.
  * Proprietary and confidential.
- * Created by Oleh Kulykov <olehkulykov@gmail.com>, 2024.
+ * Created by Oleh Kulykov <olehkulykov@gmail.com>, 2024 - 2025.
  */
 
 #ifndef __RSD_PID_H__

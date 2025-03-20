@@ -2,7 +2,7 @@
  * Copyright (C) Oleh Kulykov <olehkulykov@gmail.com>. All Rights Reserved.
  * Unauthorized copying of this file, via any medium is strictly prohibited.
  * Proprietary and confidential.
- * Created by Oleh Kulykov <olehkulykov@gmail.com>, 2024.
+ * Created by Oleh Kulykov <olehkulykov@gmail.com>, 2024 - 2025.
  */
 
 #ifndef __RSD_BUFF_H__
@@ -62,7 +62,7 @@ RSD_API(int) rsd_buff_reserve(struct rsd_buff * RSD_NONNULL buff, const size_t c
 
 RSD_API(void) rsd_buff_free(struct rsd_buff * RSD_NULLABLE buff) {
     if (buff) {
-        if (buff->ptr) free(buff->ptr);
+        if (buff->ptr) { free(buff->ptr); }
         buff->ptr = NULL;
         buff->cap = buff->len = 0;
     }
