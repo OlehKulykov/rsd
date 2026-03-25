@@ -68,6 +68,7 @@ set(RSD_TESTS_HEADERS
   rsd_logf.h
   rsd_path.h
   rsd_pid.h
+  rsd_rand.h
   rsd_stdio.h
 )
 
@@ -83,6 +84,7 @@ source_group("main" FILES
   rsd_logf.h
   rsd_path.h
   rsd_pid.h
+  rsd_rand.h
   rsd_stdio.h
 )
 

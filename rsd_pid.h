@@ -16,7 +16,7 @@
 #include "rsd.h"
 #include "rsd_errc.h"
 
-RSD_API(int) rds_pid_to_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NULLABLE currPid) {
+RSD_API(int) rsd_pid_to_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NULLABLE currPid) {
     const pid_t p = getpid();
     if (p <= 0) return RSD_ERRC_getpid;
     if (currPid) { *currPid = p; }
@@ -31,7 +31,7 @@ RSD_API(int) rds_pid_to_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NUL
     return res;
 }
 
-RSD_API(int) rds_pid_from_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NONNULL storedPid) {
+RSD_API(int) rsd_pid_from_fpath(const char * RSD_NONNULL filePath, pid_t * RSD_NONNULL storedPid) {
     *storedPid = 0;
     FILE * f = fopen(filePath, "rb");
     if (!f) return RSD_ERRC_fopen;

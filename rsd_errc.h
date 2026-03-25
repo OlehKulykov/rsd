@@ -16,5 +16,6 @@
 #define RSD_ERRC_realloc    -1006
 #define RSD_ERRC_close      -1007
 #define RSD_ERRC_freopen    -1008
+#define RSD_ERRC_open       -1009
 
 #endif // !__RSD_ERRC_H__

@@ -15,20 +15,21 @@
 #include "../rsd_logf.h"
 #include "../rsd_path.h"
 #include "../rsd_pid.h"
+#include "../rsd_rand.h"
 #include "../rsd_stdio.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     pid_t pid1, pid2;
-    rds_pid_to_fpath("/tmp/rsd_tests.pid", &pid1);
-    rds_pid_from_fpath("/tmp/rsd_tests.pid", &pid2);
+    rsd_pid_to_fpath("/tmp/rsd_tests.pid", &pid1);
+    rsd_pid_from_fpath("/tmp/rsd_tests.pid", &pid2);
     struct rsd_buff buff = rsd_buff_init(0);
     rsd_buff_reserve(&buff, 16);
     rsd_buff_reserve(&buff, 32);
     rsd_buff_free(&buff);
-    for (int i = 0; i < 10; i++) {
-        fprintf(stdout, "%i ", i);
+    for (uint32_t i = 0; i < 10; i++) {
+        fprintf(stdout, "%u ", rsd_rand_in_range(0, 10));
         fflush(stdout);
         usleep(100);
     }
